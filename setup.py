@@ -7,7 +7,7 @@ from setuptools import find_packages, setup
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-OPTIONAL_DEPENDENCIES = ("autograd", "tensorflow")
+OPTIONAL_DEPENDENCIES = ("jax", "autograd", "tensorflow")
 
 
 def parse_requirements_file(filename):
