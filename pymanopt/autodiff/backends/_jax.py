@@ -62,8 +62,7 @@ class JaxBackend(Backend):
         return jax.grad(vector_dot_gradient, argnum)
 
     @Backend._assert_backend_available
-    def compute_hessian_vector_product(self, function, arguments):
-        num_arguments = len(arguments)
+    def compute_hessian_vector_product(self, function, num_arguments):
         hessian_vector_product = self._hessian_vector_product(
             function, argnum=tuple(range(num_arguments))
         )
