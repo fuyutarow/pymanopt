@@ -34,7 +34,7 @@ class JaxBackend(Backend):
         )
 
     @Backend._assert_backend_available
-    def compile_function(self, function, arguments):
+    def prepare_function(self, function):
         return jit(function)
 
     @Backend._assert_backend_available
