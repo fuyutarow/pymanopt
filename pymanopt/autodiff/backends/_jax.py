@@ -14,7 +14,6 @@ except ImportError:
     jax = None
 
 from ._backend import Backend
-from .. import make_tracing_backend_decorator
 from ...tools import bisect_sequence, unpack_singleton_sequence_return_value
 
 
