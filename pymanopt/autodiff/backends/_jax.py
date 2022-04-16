@@ -38,8 +38,7 @@ class JaxBackend(Backend):
         return jit(function)
 
     @Backend._assert_backend_available
-    def compute_gradient(self, function, arguments):
-        num_arguments = len(arguments)
+    def compute_gradient(self, function, num_arguments):
         gradient = jax.grad(function, argnums=list(range(num_arguments)))
         if num_arguments == 1:
             return unpack_singleton_sequence_return_value(gradient)
