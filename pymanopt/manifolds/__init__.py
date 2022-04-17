@@ -1,15 +1,18 @@
 __all__ = [
     "ComplexCircle",
+    "ComplexEuclidean",
     "ComplexGrassmann",
     "Elliptope",
     "Euclidean",
     "FixedRankEmbedded",
     "Grassmann",
+    "HermitianPositiveDefinite",
     "Oblique",
     "PSDFixedRank",
     "PSDFixedRankComplex",
     "Product",
     "SkewSymmetric",
+    "SpecialHermitianPositiveDefinite",
     "SpecialOrthogonalGroup",
     "Sphere",
     "SphereSubspaceComplementIntersection",
@@ -21,9 +24,11 @@ __all__ = [
 ]
 
 from .complex_circle import ComplexCircle
+from .complex_euclidean import ComplexEuclidean
 from .euclidean import Euclidean, SkewSymmetric, Symmetric
 from .fixed_rank import FixedRankEmbedded
 from .grassmann import ComplexGrassmann, Grassmann
+from .hpd import HermitianPositiveDefinite, SpecialHermitianPositiveDefinite
 from .oblique import Oblique
 from .positive_definite import SymmetricPositiveDefinite
 from .product import Product

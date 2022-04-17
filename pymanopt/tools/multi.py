@@ -54,6 +54,11 @@ def multisym(A):
     return 0.5 * (A + multitransp(A))
 
 
+def multiherm(A):
+    # Inspired by MATLAB multiherm function by Nicholas Boumal.
+    return 0.5 * (A + multihconj(A))
+
+
 def multiskew(A):
     """Vectorized matrix skew-symmetrization.
 
@@ -76,7 +81,7 @@ def multilog(A, pos_def=False):
 
     w, v = np.linalg.eigh(A)
     w = np.expand_dims(np.log(w), axis=-1)
-    return multiprod(v, w * multitransp(v))
+    return multiprod(v, w * multihconj(v))
 
 
 def multiexp(A, sym=False):
